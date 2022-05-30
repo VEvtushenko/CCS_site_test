@@ -31,7 +31,7 @@ public class DriverUtils {
         return getWebDriver().getPageSource().getBytes(StandardCharsets.UTF_8);
     }
 
-    public static URL getVideoUrl(String sessionId) {
+    public static URL getVideoUrl(String sessionId)  {
         String videoUrl = Project.config.videoStorage() + sessionId + ".mp4";
 
         try {

@@ -55,7 +55,7 @@ public class TestCCSSite extends TestBase {
     }
 
     @MethodSource("dataSourceServices")
-    @ParameterizedTest(name = "Проверка наполнения подраздела {0}")
+    @ParameterizedTest(name = "Проверка наполнения подраздела \"Услуги/{0}\"")
     void testServSection(String servName, String servDescription) {
         step("Открываем сайт на разделе \"Услуги\"", () -> {
             open("/#services");
