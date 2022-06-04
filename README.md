@@ -46,6 +46,11 @@ For runing the "Service" section test use
 .gradlew clean testSectionServices
 ```
 
+For runing in Opera browser, 87.0 version the links check for site sections use
+```bash
+.gradlew clean testSiteSections -Dbrowser="opera" -DbrowserVersion="87.0"
+```
+
 # Notifications
 
 You may receive notification about test status in Telegram.
