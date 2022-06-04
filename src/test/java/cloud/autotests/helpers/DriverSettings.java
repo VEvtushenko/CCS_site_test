@@ -37,7 +37,9 @@ public class DriverSettings {
             Configuration.remote = Project.config.remoteDriverUrl();
         }
 
-        capabilities.setCapability(ChromeOptions.CAPABILITY, chromeOptions);
-        Configuration.browserCapabilities = capabilities;
+        if (Project.config.browser().equals("chrome")) {
+            capabilities.setCapability(ChromeOptions.CAPABILITY, chromeOptions);
+            Configuration.browserCapabilities = capabilities;
+        }
     }
 }
