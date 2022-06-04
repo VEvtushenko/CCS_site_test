@@ -5,16 +5,9 @@
 <a target="_blank" href="https://jenkins.autotests.cloud/job/C12-Snark-CCS_site_test/">There you may run the tests by yourself</a>
 
 
-# USAGE examples
-For runing all tests use 
-> .gradlew clean testCCSSite 
+# For example, test all sections links
 
-For runing the links check for site sections use
-> .gradlew clean testSiteSections
-
-For runing the "Service" section test use
-> .gradlew clean testSectionServices
-
+<p><img src="src/test/resources/img/CCS.gif" alt="Здесь должна быть картинка"></p>
 
 ### For run remote tests need fill remote.properties or to pass value:
 
@@ -32,22 +25,34 @@ Run tests with filled remote.properties:
 gradle clean test
 ```
 
-Run tests with not filled remote.properties:
-```bash
-gradle clean -DremoteDriverUrl=https://%s:%s@selenoid.autotests.cloud/wd/hub/ -DvideoStorage=https://selenoid.autotests.cloud/video/ -Dthreads=1 test
-```
-
 Serve report:
 ```bash
 allure serve build/allure-results
 ```
 
-
-###### For further development there are some example tests in src/test/java/cloud.autotests/tests/demowebshop
-* remove @Disabled("...") annotation to run tests
+For runing all tests use
 ```bash
-gradle clean demowebshop
+.gradlew clean testCCSSite
+``` 
+
+For runing the links check for site sections use
+```bash
+.gradlew clean testSiteSections
 ```
+
+For runing the "Service" section test use
+```bash
+.gradlew clean testSectionServices
+```
+
+# Notifications
+
+You may receive notification about test status in Telegram.
+For receiveing notifications <a target="_blank" href="https://t.me/+riUIEOt4kjswODYy">join this group</a>
+
+Notifications will be sent every time when <a target="_blank" href="https://jenkins.autotests.cloud/job/C12-Snark-CCS_site_test/">this Jenkins job</a> will be run
+
+For more information about configure and using notifications <a target="_blank" href="https://github.com/qa-guru/allure-notifications">visit developers page</a>
 
 :heart: <a target="_blank" href="https://qa.guru">qa.guru</a><br/>
 :blue_heart: <a target="_blank" href="https://t.me/qa_automation">t.me/qa_automation</a>
