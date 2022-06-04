@@ -27,6 +27,7 @@ public class TestCCSSite extends TestBase {
         );
     }
 
+    @Tag("testSiteSections")
     @MethodSource("dataSourceSiteSections")
     @ParameterizedTest(name = "Проверка соответствия ссылки на раздел \"{0}\" и его содержимого")
     void testSiteSections(String sectionName, String sectionContent) {
@@ -54,6 +55,7 @@ public class TestCCSSite extends TestBase {
         );
     }
 
+    @Tag("testSectionServices")
     @MethodSource("dataSourceServices")
     @ParameterizedTest(name = "Проверка наполнения подраздела \"Услуги/{0}\"")
     void testServSection(String servName, String servDescription) {

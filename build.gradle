@@ -70,3 +70,16 @@ task testCCSSite(type: Test) {
         includeTags 'testCCSSite'
     }
 }
+
+task testSiteSections(type: Test) {
+    useJUnitPlatform {
+        includeTags 'testSiteSections'
+    }
+}
+
+task testSectionServices(type: Test) {
+    useJUnitPlatform {
+        includeTags 'testSectionServices'
+    }
+}
+

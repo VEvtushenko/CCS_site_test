@@ -1,11 +1,20 @@
-# Project in Allure TestOps with manual & automated tests
-<a target="_blank" href="https://allure.autotests.cloud/project/%s">allure.autotests.cloud/project/%s</a> (ask admin@qa.guru for access)
+# Project in 
+<a target="_blank" href="https://jenkins.autotests.cloud/job/C12-Snark-CCS_site_test/allure/">Allure report</a>
 
 # Jenkins job
-<a target="_blank" href="https://jenkins.autotests.cloud/job/%s">jenkins.autotests.cloud/job/%s</a>
+<a target="_blank" href="https://jenkins.autotests.cloud/job/C12-Snark-CCS_site_test/">There you may run the tests by yourself</a>
 
 
 # USAGE examples
+For runing all tests use 
+> .gradlew clean testCCSSite 
+
+For runing the links check for site sections use
+> .gradlew clean testSiteSections
+
+For runing the "Service" section test use
+> .gradlew clean testSectionServices
+
 
 ### For run remote tests need fill remote.properties or to pass value:
 
