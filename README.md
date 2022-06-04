@@ -1,9 +1,10 @@
-# Project in 
-<a target="_blank" href="https://jenkins.autotests.cloud/job/C12-Snark-CCS_site_test/allure/">Allure report</a>
+# Hi there!
+This is the test of CCS company site that I wrote for introducing myself and to compete to the QA automation engineer vacancy in this company.
 
 # Jenkins job
 <a target="_blank" href="https://jenkins.autotests.cloud/job/C12-Snark-CCS_site_test/">There you may run the tests by yourself</a>
 
+<a target="_blank" href="https://jenkins.autotests.cloud/job/C12-Snark-CCS_site_test/allure/">Allure report</a>
 
 # For example, test all sections links
 
