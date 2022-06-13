@@ -2,20 +2,12 @@ package cloud.autotests.tests;
 
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Tag;
-import org.junit.jupiter.api.Test;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.MethodSource;
 
-import static cloud.autotests.data.testData.contentAboutUs;
-
 @DisplayName("Тест сайта компании CCS")
-@Tag("testCCSSite")
-public class TestCCSSite extends TestBase {
-
-    @Test
-    void helper() {
-        System.out.println(contentAboutUs);
-    }
+@Tag("testCcsSite")
+public class TestCcsSite extends TestBase {
 
     @Tag("testSiteSections")
     @MethodSource("dataSourceSiteSections")
@@ -30,7 +22,7 @@ public class TestCCSSite extends TestBase {
     @ParameterizedTest(name = "Проверка наполнения подраздела \"Услуги/{0}\"")
     void testServSection(String servName, String servDescription) {
         ccsSite.openSite("Услуги")
-                .servisesTest(servName, servDescription);
+                .servicesTest(servName, servDescription);
     }
 
     @Tag("testSectionVacancies")

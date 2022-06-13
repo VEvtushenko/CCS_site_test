@@ -15,8 +15,9 @@ public class CcsSite {
     @Step("Открываем сайт на нужном разделе")
     public CcsSite openSite(String sectionName){
        open("/");
-       if (!sectionName.equals(null)) {
+       if (!sectionName.equals("Главная")) {
            $(".navbar").$(byText(sectionName)).click();
+           return this;
        }
         return this;
     }
@@ -27,12 +28,12 @@ public class CcsSite {
     }
 
     @Step("Проверяем наполнение раздела \"Услуги\"")
-    public void servisesTest(String servName, String servContent) {
+    public void servicesTest(String servName, String servContent) {
         $(withText(servName)).click();
         $(byText(servContent)).shouldBe(visible);
     }
 
-    @Step("")
+    @Step("Проверка раздела \"Вакансии\"")
     public void vacancyTest(String vacancy, String charges, String requirements) {
         $("[data-hover-roll='" + vacancy + "']").click();
         $("[data-hover-roll='" + vacancy + "']")
