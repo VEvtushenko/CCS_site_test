@@ -26,5 +26,4 @@ public class TestData {
             listVacancyNames = textFilesReader.getListOfString(vacancyNames),
             listVacancyCharges = textFilesReader.getListOfString(vacancyCharges),
             listVacancyRequirements = textFilesReader.getListOfString(vacancyRequirements);
-
 }
