@@ -2,12 +2,11 @@ package cloud.autotests.pages;
 
 import io.qameta.allure.Step;
 
-import static com.codeborne.selenide.Condition.text;
-import static com.codeborne.selenide.Condition.visible;
+import static com.codeborne.selenide.Condition.*;
 import static com.codeborne.selenide.Selectors.byText;
 import static com.codeborne.selenide.Selectors.withText;
-import static com.codeborne.selenide.Selenide.$;
-import static com.codeborne.selenide.Selenide.open;
+import static com.codeborne.selenide.Selenide.*;
+import static io.qameta.allure.Allure.step;
 
 
 public class CcsSite {
@@ -22,27 +21,37 @@ public class CcsSite {
         return this;
     }
 
-    @Step("Проверка, что открылся правильный раздел")
+    @Step("Проверяем, что открылся правильный раздел")
     public void sectionCheck(String sectionContent) {
         $(byText(sectionContent)).shouldBe(visible);
     }
 
-    @Step("Проверяем наполнение раздела \"Услуги\"")
     public void servicesTest(String servName, String servContent) {
-        $(withText(servName)).click();
-        $(byText(servContent)).shouldBe(visible);
+        step("Раскрываем и проверяем содержимое  \"{servName}\"", () -> {
+            $(withText(servName)).click();
+            $(byText(servContent)).shouldBe(visible);
+        });
+        step("Закрываем подраздел и проверяем, что он закрылся", () -> {
+            $(".services-popup__close").click();
+            $("[class='services__popup services-popup active services-popup--pos-1']").shouldNotBe(exist);
+        });
     }
 
-    @Step("Проверка раздела \"Вакансии\"")
     public void vacancyTest(String vacancy, String charges, String requirements) {
-        $("[data-hover-roll='" + vacancy + "']").click();
-        $("[data-hover-roll='" + vacancy + "']")
+        step("Раскрываем и проверяем содержимое вакансии \"{vacancy}\"", () -> {
+            $("[data-hover-roll='" + vacancy + "']").click();
+            $("[data-hover-roll='" + vacancy + "']")
                 .parent().sibling(1)
                 .$(byText("Обязанности:")).sibling(0)
                 .shouldHave(text(charges));
-        $("[data-hover-roll='" + vacancy + "']")
+            $("[data-hover-roll='" + vacancy + "']")
                 .parent().sibling(1)
                 .$(byText("Требования:")).sibling(0)
                 .shouldHave(text(requirements));
+        });
+        step("Закрываем вакансию и проверяем, что она закрылась", () -> {
+            $("[data-hover-roll='" + vacancy + "']").click();
+            $(byText("Обязанности:")).shouldNotBe(visible);
+        });
     }
 }
