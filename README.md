@@ -17,9 +17,9 @@
 
 [Уведомления в Telegram](#-уведомления-в-telegram)
 
-<a href="Видеозапись-прохождения-теста">Видеозапись прохождения теста</a>
+<a href="#Видеозапись-прохождения-теста">Видеозапись прохождения теста</a>
 
-<a href="Применявшийся-стек">Применявшийся стек</a>
+<a href="#Применявшийся-стек">Применявшийся стек</a>
 
 ## <a name="покрытый-функционал"></a> Покрытый функционал
 
@@ -76,7 +76,7 @@ For run remote tests need fill remote.properties or to pass value:
 
 ## Интеграция с Jira
 
-## Уведомления в Telegram
+##Уведомления в Telegram
 You may receive notification about test status in Telegram.
 For receiveing notifications <a target="_blank" href="https://t.me/+riUIEOt4kjswODYy">join this group</a>
 
