@@ -1,27 +1,30 @@
 # Проект по автоматизации тестрования сайта компании CCS
-Навигация
 
-[Покрытый функционал  Реализованные проверки](покрытый-функционал)
+## Навигация
 
-[Запуск тестов из терминала](#-запуск-тестов-из-терминала)
+<a href="#Реализованные-проверки">Реализованные проверки</a>
 
-[Параметры тестов](#-параметры-тестов)
+<a href="#Запуск-тестов-из-терминала">Запуск тестов из терминала</a>
 
-[Сборка в Jenkins](#-главная-страница-сборки-Jenkins)
+<a href="#Параметры-тестов">Параметры тестов</a>
 
-[Отчет Allure Report](#-отчет-allure-report)
+<a href="#Сборка-в-Jenkins">Сборка в Jenkins</a>
 
-[Интеграция с Allure TestOps](#-интеграция-с-allure-testops)
+<a href="#Отчет-allure-report">Отчет Allure Report</a>
 
-[Интеграция с Jira](#-интеграция-с-jira)
+<a href="#Интеграция-с-allure-testops">Интеграция с Allure TestOps</a>
 
-[Уведомления в Telegram](#уведомления-в-telegram)
+<a href="#Интеграция-с-jira">Интеграция с Jira</a>
+
+<a href="#Уведомления-в-Telegram">Уведомления в Telegram</a>
 
 <a href="#Видеозапись-прохождения-теста">Видеозапись прохождения теста</a>
 
 <a href="#Применявшийся-стек">Применявшийся стек</a>
 
-## <a name="покрытый-функционал"></a> Покрытый функционал
+## Реализованные проверки
+
+<a href="#Навигация">Назад к оглавлению</a>
 
 ## Запуск тестов из терминала
 Run tests with filled remote.properties:
@@ -53,6 +56,7 @@ For runing in Opera browser, 87.0 version the links check for site sections use
 ```bash
 .gradlew clean testSiteSections -Dbrowser="opera" -DbrowserVersion="87.0"
 ```
+<a href="#Навигация">Назад к оглавлению</a>
 
 ## Параметры тестов
 For run remote tests need fill remote.properties or to pass value:
@@ -65,16 +69,25 @@ For run remote tests need fill remote.properties or to pass value:
 * videoStorage (url address where you should get video)
 * threads (number of threads)
 
+<a href="#Навигация">Назад к оглавлению</a>
 
 ## Сборка в Jenkins
 <a target="_blank" href="https://jenkins.autotests.cloud/job/C12-Snark-CCS_site_test/">There you may run the tests by yourself</a>
 
+<a href="#Навигация">Назад к оглавлению</a>
+
 ## Отчет Allure Report
 <a target="_blank" href="https://jenkins.autotests.cloud/job/C12-Snark-CCS_site_test/allure/">Allure report</a>
 
+<a href="#Навигация">Назад к оглавлению</a>
+
 ## Интеграция с Allure TestOps
 
+<a href="#Навигация">Назад к оглавлению</a>
+
 ## Интеграция с Jira
+
+<a href="#Навигация">Назад к оглавлению</a>
 
 ##Уведомления в Telegram
 You may receive notification about test status in Telegram.
@@ -84,27 +97,31 @@ Notifications will be sent every time when <a target="_blank" href="https://jenk
 
 For more information about configure and using notifications <a target="_blank" href="https://github.com/qa-guru/allure-notifications">visit developers page</a>
 
+<a href="#Навигация">Назад к оглавлению</a>
 
 ## Видеозапись прохождения теста
 <p><img src="readme-files/test_video/CCS.gif" alt="Здесь должна быть gif с тестом"></p>
 
+<a href="#Навигация">Назад к оглавлению</a>
+
 ## Применявшийся стек
 IntelliJ IDEA Java Gradle Selenide Selenoid JUnit5 Jenkins Allure Report Allure TestOps Telegram Jira
 <p align="center">
-<img width="4%" title="IntelliJ IDEA" src="readme-files/logo/Intelij_IDEA.svg">
-<img width="4%" title="Java" src="readme-files/logo/Java.svg">
-<img width="4%" title="Selenide" src="readme-files/logo/Selenide.svg">
-<img width="4%" title="Selenoid" src="readme-files/logo/Selenoid.svg">
-<img width="4%" title="Allure Report" src="readme-files/logo/Allure_Report.svg">
-<img width="4%" title="Gradle" src="readme-files/logo/Gradle.svg">
-<img width="4%" title="JUnit5" src="readme-files/logo/JUnit5.svg">
-<img width="4%" title="GitHub" src="readme-files/logo/GitHub.svg">
-<img width="4%" title="Jenkins" src="readme-files/logo/Jenkins.svg">
-<img width="4%" title="Telegram" src="readme-files/logo/Telegram.svg">
-<img width="4%" title="Jira" src="readme-files/logo/Jira.svg">
-<img width="4%" title="Jira" src="readme-files/logo/Allure_TO.svg">
+<img width="4%" title="IntelliJ IDEA" src="readme-files/logo/Intelij_IDEA.svg"  alt="IntelliJ IDEA">
+<img width="4%" title="Java" src="readme-files/logo/Java.svg" alt="Java">
+<img width="4%" title="Selenide" src="readme-files/logo/Selenide.svg" alt="Selenide">
+<img width="4%" title="Selenoid" src="readme-files/logo/Selenoid.svg" alt="Selenoid">
+<img width="4%" title="Allure Report" src="readme-files/logo/Allure_Report.svg" alt="Allure Report">
+<img width="4%" title="Allure TestOps" src="readme-files/logo/Allure_TO.svg" alt="Allure TestOps">
+<img width="4%" title="Gradle" src="readme-files/logo/Gradle.svg" alt="Gradle">
+<img width="4%" title="JUnit5" src="readme-files/logo/JUnit5.svg" alt="JUnit5">
+<img width="4%" title="GitHub" src="readme-files/logo/GitHub.svg" alt="GitHub">
+<img width="4%" title="Jenkins" src="readme-files/logo/Jenkins.svg" alt="Jenkins">
+<img width="4%" title="Telegram" src="readme-files/logo/Telegram.svg" alt="Telegram">
+<img width="4%" title="Jira" src="readme-files/logo/Jira.svg" alt="Jira">
 </p>
 
+<a href="#Навигация">Назад к оглавлению</a>
 
 :heart: <a target="_blank" href="https://qa.guru">qa.guru</a><br/>
 :blue_heart: <a target="_blank" href="https://t.me/qa_automation">t.me/qa_automation</a>
