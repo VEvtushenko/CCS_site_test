@@ -38,7 +38,7 @@
 ```bash
 gradle clean testCcsSite
 ```
-###Запуск проверки разделов
+#### Запуск проверки разделов
 ```bash
 gradle clean testSiteSections
 ```
