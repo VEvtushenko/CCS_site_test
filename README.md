@@ -10,11 +10,7 @@
 
 <a href="#Сборка-в-Jenkins">Сборка в Jenkins</a>
 
-<a href="#Отчет-allure-report">Отчет Allure Report</a>
-
-<a href="#Интеграция-с-allure-testops">Интеграция с Allure TestOps</a>
-
-<a href="#Интеграция-с-jira">Интеграция с Jira</a>
+<a href="#Отчет-Allure-Report">Отчет Allure Report</a>
 
 <a href="#Уведомления-в-Telegram">Уведомления в Telegram</a>
 
@@ -32,9 +28,27 @@
 
 <a href="#Навигация">Назад к оглавлению</a>
 
-## Запуск тестов из терминала
+## Параметры тестов
+Для изменения настроек запуска тестов отредактируйте файл remote.properties в папке src/test/resources/config 
+* browser (Браузер, по умолчанию chrome)
+* browserVersion (Версия браузера, по умолчанию 100.0)
+* browserSize (Размер окна браузера, по умолчанию 1920x1080)
+* remoteDriverUrl (URL и логин/пароль хоста, на котором вы запускаете тесты)
+* videoStorage (URL с которого вы получаете видеозапись теста)
 
-Запуск всех тестов
+Или запустите тесты из консоли с соответствующими ключами
+
+```bash
+.gradlew clean testSiteSections -Dbrowser="{Название браузера}" -DbrowserVersion="{Версия браузера}" -DbrowserSize="{}" -DremoteDriverUrl="{https://Имя пользователя:Пароль@Адрес хоста, на котором проводится запуск тестов}"
+```
+Например такая команда запустит тесты в браузере Опера, версии 87.0
+```bash
+.gradlew clean testSiteSections -Dbrowser="opera" -DbrowserVersion="87.0"
+```
+
+
+## Запуск тестов из терминала
+#### Запуск всех тестов
 ```bash
 gradle clean testCcsSite
 ```
@@ -50,74 +64,30 @@ gradle clean testSectionServices
 ```bash
 gradle clean testSectionVacancies
 ```
+<a href="#Навигация">Назад к оглавлению</a>
 
-
-
-
-Serve report:
+## Отчет-Allure-Report:
+Для получения отчёта с помощью команды в консоли введите
 ```bash
 allure serve build/allure-results
 ```
 
-For runing all tests use
-```bash
-.gradlew clean testCCSSite
-``` 
-
-For runing the links check for site sections use
-```bash
-.gradlew clean testSiteSections
-```
-
-For runing the "Service" section test use
-```bash
-.gradlew clean testSectionServices
-```
-
-For runing in Opera browser, 87.0 version the links check for site sections use
-```bash
-.gradlew clean testSiteSections -Dbrowser="opera" -DbrowserVersion="87.0"
-```
-<a href="#Навигация">Назад к оглавлению</a>
-
-## Параметры тестов
-For run remote tests need fill remote.properties or to pass value:
-
-* browser (default chrome)
-* browserVersion (default 89.0)
-* browserSize (default 1920x1080)
-* browserMobileView (mobile device name, for example iPhone X)
-* remoteDriverUrl (url address from selenoid or grid)
-* videoStorage (url address where you should get video)
-* threads (number of threads)
+<a target="_blank" href="https://jenkins.autotests.cloud/job/C12-Snark-CCS_site_test/allure/">Здесь вы можете увидеть отчёт Allure report последней сборки в Jenkins</a>
 
 <a href="#Навигация">Назад к оглавлению</a>
 
 ## Сборка в Jenkins
-<a target="_blank" href="https://jenkins.autotests.cloud/job/C12-Snark-CCS_site_test/">There you may run the tests by yourself</a>
-
-<a href="#Навигация">Назад к оглавлению</a>
-
-## Отчет Allure Report
-<a target="_blank" href="https://jenkins.autotests.cloud/job/C12-Snark-CCS_site_test/allure/">Allure report</a>
-
-<a href="#Навигация">Назад к оглавлению</a>
-
-## Интеграция с Allure TestOps
-
-<a href="#Навигация">Назад к оглавлению</a>
-
-## Интеграция с Jira
+<a target="_blank" href="https://jenkins.autotests.cloud/job/C12-Snark-CCS_site_test/">Здесь вы можете попробовать запустить тесты самостоятельно</a>
 
 <a href="#Навигация">Назад к оглавлению</a>
 
 ##Уведомления в Telegram
-You may receive notification about test status in Telegram.
-For receiveing notifications <a target="_blank" href="https://t.me/+riUIEOt4kjswODYy">join this group</a>
+Вы можете получать уведомления о статусе тестов в Telegram.
+Для получения уведомления <a target="_blank" href="https://t.me/+riUIEOt4kjswODYy">вступите в эту группу</a>
 
-Notifications will be sent every time when <a target="_blank" href="https://jenkins.autotests.cloud/job/C12-Snark-CCS_site_test/">this Jenkins job</a> will be run
+Уведомления будут приходить после каждого запуска <a target="_blank" href="https://jenkins.autotests.cloud/job/C12-Snark-CCS_site_test/">этой сборки в Jenkins </a>
 
-For more information about configure and using notifications <a target="_blank" href="https://github.com/qa-guru/allure-notifications">visit developers page</a>
+Чтобы узнать больше о настройке уведомлений, <a target="_blank" href="https://github.com/qa-guru/allure-notifications">пожалуйста, посетите страницу разработчика</a>
 
 <a href="#Навигация">Назад к оглавлению</a>
 
@@ -127,20 +97,18 @@ For more information about configure and using notifications <a target="_blank" 
 <a href="#Навигация">Назад к оглавлению</a>
 
 ## Применявшийся стек
-IntelliJ IDEA Java Gradle Selenide Selenoid JUnit5 Jenkins Allure Report Allure TestOps Telegram Jira
+IntelliJ IDEA Java Gradle Selenide Selenoid JUnit5 Jenkins Allure Report Telegram 
 <p align="center">
 <img width="4%" title="IntelliJ IDEA" src="readme-files/logo/Intelij_IDEA.svg"  alt="IntelliJ IDEA">
 <img width="4%" title="Java" src="readme-files/logo/Java.svg" alt="Java">
 <img width="4%" title="Selenide" src="readme-files/logo/Selenide.svg" alt="Selenide">
 <img width="4%" title="Selenoid" src="readme-files/logo/Selenoid.svg" alt="Selenoid">
 <img width="4%" title="Allure Report" src="readme-files/logo/Allure_Report.svg" alt="Allure Report">
-<img width="4%" title="Allure TestOps" src="readme-files/logo/Allure_TO.svg" alt="Allure TestOps">
 <img width="4%" title="Gradle" src="readme-files/logo/Gradle.svg" alt="Gradle">
 <img width="4%" title="JUnit5" src="readme-files/logo/JUnit5.svg" alt="JUnit5">
 <img width="4%" title="GitHub" src="readme-files/logo/GitHub.svg" alt="GitHub">
 <img width="4%" title="Jenkins" src="readme-files/logo/Jenkins.svg" alt="Jenkins">
 <img width="4%" title="Telegram" src="readme-files/logo/Telegram.svg" alt="Telegram">
-<img width="4%" title="Jira" src="readme-files/logo/Jira.svg" alt="Jira">
 </p>
 
 <a href="#Навигация">Назад к оглавлению</a>
