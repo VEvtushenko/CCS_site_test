@@ -104,7 +104,6 @@ allure serve build/allure-results
 <a href="#Навигация">Назад к оглавлению</a>
 
 ## Применявшийся стек
-IntelliJ IDEA Java Gradle Selenide Selenoid JUnit5 Jenkins Allure Report Telegram 
 <p align="center">
 <img width="4%" title="IntelliJ IDEA" src="readme-files/logo/Intelij_IDEA.svg"  alt="IntelliJ IDEA">
 <img width="4%" title="Java" src="readme-files/logo/Java.svg" alt="Java">
